@@ -1,0 +1,79 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# Genrule to trigger loading of both images
+load("@rules_multirun//:defs.bzl", "command", "multirun")
+load("@rules_oci//oci:defs.bzl", "oci_image", "oci_load")
+load("@rules_pkg//:pkg.bzl", "pkg_tar")
+
+# Gazelle and package setup (unchanged)
+gazelle(
+    name = "gazelle",
+)
+
+pkg_tar(
+    name = "app_layer",
+    srcs = ["//go_web:app1"],
+    mode = "0755",
+)
+
+pkg_tar(
+    name = "app1_layer",
+    srcs = ["//go_web1:app2"],
+    mode = "0755",
+)
+
+oci_image(
+    name = "my_image1",
+    base = "@golang_base",
+    entrypoint = ["/app1"],
+    tars = [":app_layer"],
+    visibility = ["//visibility:public"],
+)
+
+oci_image(
+    name = "my_image2",
+    base = "@golang_base",
+    entrypoint = ["/app2"],
+    tars = [":app1_layer"],
+    visibility = ["//visibility:public"],
+)
+
+# Filegroup to handle the images
+filegroup(
+    name = "docker-build",
+    srcs = [
+        ":my_image1",
+        ":my_image2",
+    ],
+)
+
+# Load the images into Docker
+oci_load(
+    name = "load_image1",
+    image = "my_image1",
+    repo_tags = ["myapp/web1:latest"],
+)
+
+oci_load(
+    name = "load_image2",
+    image = "my_image2",
+    repo_tags = ["myapp/web2:latest"],
+)
+
+IMAGES = {
+    "webservice": ":load_image1",
+    "backend": ":load_image2",
+}
+
+[
+    command(
+        name = k,
+        command = v,
+    )
+    for (k, v) in IMAGES.items()
+]
+
+multirun(
+    name = "load_all",
+    commands = IMAGES.keys(),
+)

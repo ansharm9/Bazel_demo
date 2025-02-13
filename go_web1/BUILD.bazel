@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "go_web1_lib",
+    srcs = ["main.go"],
+    importpath = "my_project/go_web1",
+    visibility = ["//visibility:private"],
+)
+
+go_binary(
+    name = "app2",
+    embed = [":go_web1_lib"],
+    # goarch = "arm64",
+    # goos = "linux",
+    # pure = "on",
+    visibility = ["//visibility:public"],
+)
+
+# filegroup(
+#     name = "app_bin2",
+#     srcs = [":app2"],
+#     visibility = ["//visibility:public"],
+# )

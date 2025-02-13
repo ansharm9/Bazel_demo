@@ -1,0 +1,76 @@
+Build options: --verbose_failures --explain=/Users/ansharm9/Desktop/bazel/my_project/explain.txt --remote_cache=http://localhost:8080
+Executing action 'Writing script backend.bash': no entry in the cache (action is new).
+Executing action 'Writing file app_layer.manifest': no entry in the cache (action is new).
+Executing action 'BazelWorkspaceStatusAction stable-status.txt': unconditional execution is requested.
+Executing action 'Expanding template external/rules_pkg/pkg/private/tar/build_tar [for tool]': no entry in the cache (action is new).
+Executing action 'Writing file external/go_sdk/packages.txt [for tool]': no entry in the cache (action is new).
+Executing action 'Writing script load_all.bash': no entry in the cache (action is new).
+Executing action 'Expanding template load_image1.sh': no entry in the cache (action is new).
+Executing action 'Expanding template load_image2.sh': no entry in the cache (action is new).
+Executing action 'Writing script webservice.bash': no entry in the cache (action is new).
+Executing action 'Expanding template external/bazel_tools/tools/python/py3wrapper.sh [for tool]': no entry in the cache (action is new).
+Executing action 'Writing file load_image2.tags.txt': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //:load_image1': no entry in the cache (action is new).
+Executing action 'Expanding template load_image2/load.sh': no entry in the cache (action is new).
+Executing action 'Expanding template load_image1/load.sh': no entry in the cache (action is new).
+Executing action 'Writing file load_image1.tags.txt': no entry in the cache (action is new).
+Executing action 'Expanding template image_my_image2.sh': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for @@rules_pkg//pkg/private/tar:build_tar [for tool]': no entry in the cache (action is new).
+Executing action 'Expanding template external/rules_multirun/internal/multirun [for tool]': no entry in the cache (action is new).
+Executing action 'Writing file my_image2.entrypoint.txt': no entry in the cache (action is new).
+Executing action 'Writing file load_all.json': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //:load_all': no entry in the cache (action is new).
+Executing action 'Creating source manifest for @@rules_pkg//pkg/private/tar:build_tar [for tool]': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //:backend': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //:load_image1': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //:load_all': no entry in the cache (action is new).
+Executing action 'Expanding template image_my_image1.sh': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //:backend': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/load_image1.sh.runfiles': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_pkg/pkg/private/tar/build_tar.runfiles [for tool]': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/load_all.bash.runfiles': no entry in the cache (action is new).
+Executing action 'Writing file my_image1.entrypoint.txt': no entry in the cache (action is new).
+Executing action 'Writing file external/golang_base_linux_arm64/golang_base_linux_arm64_config.json': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/backend.bash.runfiles': no entry in the cache (action is new).
+Executing action 'Writing file app1_layer.manifest': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //:load_image2': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //:load_image2': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //:webservice': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //:webservice': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //go_web1:app2': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/webservice.bash.runfiles': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/load_image2.sh.runfiles': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //go_web1:app2': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/go_web1/app2_/app2.runfiles': no entry in the cache (action is new).
+Executing action 'Writing file external/go_sdk/packages.txt [for tool]': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //go_web:app1': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //go_web:app1': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/darwin_arm64-fastbuild/bin/go_web/app1_/app1.runfiles': no entry in the cache (action is new).
+Executing action 'Writing file external/go_sdk/packages.txt [for tool]': no entry in the cache (action is new).
+Executing action 'Copying files to directory golang_base_linux_arm64/layout': no entry in the cache (action is new).
+Executing action 'GoToolchainBinaryBuild external/go_sdk/builder [for tool]': no entry in the cache (action is new).
+Executing action 'Creating symlink bazel-out/darwin_arm64-opt-exec-ST-66996d70e69a/bin/external/go_sdk/builder_reset/builder [for tool]': no entry in the cache (action is new).
+Executing action 'Creating symlink bazel-out/darwin_arm64-opt-exec-ST-cb99a62bfd19/bin/external/go_sdk/builder_reset/builder [for tool]': no entry in the cache (action is new).
+Executing action 'Creating symlink bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/go_sdk/builder_reset/builder [for tool]': no entry in the cache (action is new).
+Executing action 'GoStdlib external/io_bazel_rules_go/stdlib_/pkg': no entry in the cache (action is new).
+Executing action 'GoStdlib external/io_bazel_rules_go/stdlib_/pkg': no entry in the cache (action is new).
+Executing action 'GoCompilePkg go_web1/app2.a': no entry in the cache (action is new).
+Executing action 'GoCompilePkg lib1/lib1.a': no entry in the cache (action is new).
+Executing action 'GoCompilePkg lib1/lib1.a': no entry in the cache (action is new).
+Executing action 'GoCompilePkg go_web1/go_web1_lib.a': no entry in the cache (action is new).
+Executing action 'GoLink go_web1/app2_/app2': no entry in the cache (action is new).
+Executing action 'GoCompilePkg go_web/app1.a': no entry in the cache (action is new).
+Executing action 'GoCompilePkg go_web/go_web_lib.a': no entry in the cache (action is new).
+Executing action 'GoLink go_web/app1_/app1': no entry in the cache (action is new).
+Executing action 'Writing: bazel-out/darwin_arm64-fastbuild/bin/app1_layer.tar': no entry in the cache (action is new).
+Executing action 'Writing: bazel-out/darwin_arm64-fastbuild/bin/app_layer.tar': no entry in the cache (action is new).
+Executing action 'OCI Descriptor bazel-out/darwin_arm64-fastbuild/bin/app1_layer.tar': no entry in the cache (action is new).
+Executing action 'OCI Descriptor bazel-out/darwin_arm64-fastbuild/bin/app_layer.tar': no entry in the cache (action is new).
+Executing action 'OCI Image //:my_image2': no entry in the cache (action is new).
+Executing action 'OCI Image //:my_image1': no entry in the cache (action is new).
+Executing action 'Copying file my_image2': no entry in the cache (action is new).
+Executing action 'OCITarballManifest load_image2/tarball.spec': no entry in the cache (action is new).
+Executing action 'OCITarballManifest load_image1/tarball.spec': no entry in the cache (action is new).
+Executing action 'Copying file my_image1': no entry in the cache (action is new).
+Executing action 'Jq my_image2.json.sha256': no entry in the cache (action is new).
+Executing action 'Jq my_image1.json.sha256': no entry in the cache (action is new).
